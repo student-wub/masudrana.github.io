@@ -1,158 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masud Rana | Civil Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+    <title>Masud Rana | Civil Engineer</title>
 
-body{
-background:#f5f7fa;
-color:#333;
-}
+    <meta name="description"
+        content="Masud Rana - Civil Engineer, Estimator, AutoCAD Designer and B.Sc. Civil Engineering Student.">
 
-header{
-background:#0d47a1;
-color:white;
-padding:80px 20px;
-text-align:center;
-}
+    <link rel="stylesheet" href="style.css">
 
-header h1{
-font-size:3rem;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-header p{
-margin-top:10px;
-font-size:1.2rem;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
-
-section{
-margin-bottom:50px;
-}
-
-h2{
-color:#0d47a1;
-margin-bottom:15px;
-}
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-}
-
-.skill{
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
-text-align:center;
-}
-
-.project{
-background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-
-.contact{
-background:#0d47a1;
-color:white;
-padding:30px;
-border-radius:10px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
-}
-</style>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
-<h1>Masud Rana</h1>
-<p>Civil Engineer | Estimator | Future Developer</p>
-</header>
+    <!-- Loader -->
 
-<div class="container">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
 
-<section>
-<h2>About Me</h2>
-<p>
-I am a Civil Engineering student passionate about structural design,
-construction estimation, project management, and technology.
-I enjoy learning new skills and building practical solutions.
-</p>
-</section>
+    <!-- Navbar -->
 
-<section>
-<h2>Skills</h2>
+    <header>
 
-<div class="skills">
-<div class="skill">AutoCAD</div>
-<div class="skill">Civil Estimation</div>
-<div class="skill">MS Excel</div>
-<div class="skill">Construction Planning</div>
-<div class="skill">Quantity Surveying</div>
-<div class="skill">Project Management</div>
-</div>
+        <nav class="navbar">
 
-</section>
+            <div class="logo">
+                MASUD RANA
+            </div>
 
-<section>
-<h2>Projects</h2>
+            <ul class="nav-links">
 
-<div class="project">
-<h3>Building Quantity Estimation</h3>
-<p>Prepared detailed quantity estimation and cost analysis for residential projects.</p>
-</div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
 
-<div class="project">
-<h3>Structural Design Study</h3>
-<p>Worked on structural analysis concepts and engineering calculations.</p>
-</div>
+            </ul>
 
-<div class="project">
-<h3>Personal Engineering Portfolio</h3>
-<p>Designed and deployed a personal website using GitHub Pages and custom domain.</p>
-</div>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
-</section>
+        </nav>
 
-<section>
-<div class="contact">
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
-<p>Website: masudrana.tech</p>
-<p>GitHub: github.com/student-wub</p>
-</div>
-</section>
+    </header>
 
-</div>
+    <!-- Hero Section -->
 
-<footer>
-© 2026 Masud Rana | Civil Engineer
-</footer>
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Welcome To My Portfolio
+            </span>
+
+            <h1>
+                MASUD RANA
+            </h1>
+
+            <h2>
+                Civil Engineer | Estimator | Site Supervisor
+            </h2>
+
+            <p>
+
+                Passionate about Building Construction,
+                Quantity Estimation, Site Management,
+                AutoCAD Drafting and Modern Infrastructure.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn primary">
+                    View Projects
+                </a>
+
+                <a href="assets/cv.pdf" class="btn secondary">
+                    Download CV
+                </a>
+
+            </div>
+
+            <div class="social-icons">
+
+                <a href="https://github.com/student-wub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Masud.6r" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="assets/profile.jpg" alt="Masud Rana">
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about" class="section">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="glass-card">
+
+            <p>
+
+                I am Masud Rana, a Civil Engineering graduate from
+                Sirajganj Polytechnic Institute and currently pursuing
+                B.Sc. in Civil Engineering at World University of Bangladesh.
+
+            </p>
+
+            <p>
+
+                My interests include Quantity Estimation,
+                Construction Supervision, AutoCAD Design,
+                Site Management and Modern Engineering Technology.
+
+            </p>
+
+            <p>
+
+                I strive to continuously improve my technical knowledge
+                and practical engineering skills while contributing to
+                real-world construction projects.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Education Section -->
+
+    <section id="education" class="section">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="glass-card">
+
+                    <h3>
+                        B.Sc. in Civil Engineering
+                    </h3>
+
+                    <p>
+                        World University of Bangladesh
+                    </p>
+
+                    <span>
+                        Running
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="glass-card">
+
+                    <h3>
+                        Diploma in Civil Engineering
+                    </h3>
+
+                    <p>
+                        Sirajganj Polytechnic Institute
+                    </p>
+
+                    <span>
+                        2019 - 2023
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="glass-card">
+
+                    <h3>
+                        SSC (Electrical)
+                    </h3>
+
+                    <p>
+                        Sirajganj Sadar Technical &
+                        BM Institute
+                    </p>
+
+                    <span>
+                        GPA 4.79
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
