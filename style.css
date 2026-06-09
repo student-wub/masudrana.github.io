@@ -419,3 +419,60 @@ footer h3{
     color:#8CC0EB !important;
     font-weight:700;
 }
+/* Mobile Menu */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#334155;
+}
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+        padding:30px 0;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:140px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:1.1rem;
+    }
+
+    .hero-image img{
+        width:260px;
+    }
+
+}
