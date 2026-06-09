@@ -383,3 +383,22 @@ footer h3{
         font-size:2rem;
     }
 }
+/* Scroll Reveal */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Active Menu */
+
+.active{
+    color:#8CC0EB !important;
+    font-weight:700;
+}
