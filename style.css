@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
-    --bg:#FFF9D2;
-    --section:#FFEBCC;
-    --card:#ffffff;
+    --bg:#FAFAF7;
+    --section:#FFFFFF;
+    --card:#FFFFFF;
     --primary:#8CC0EB;
-    --secondary:#BFDDF0;
+    --secondary:#DDEFFF;
     --text:#334155;
     --heading:#0f172a;
 }
@@ -62,9 +62,10 @@ body::after{
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
-    background:rgba(255,255,255,.75);
+    background:rgba(255,255,255,.92);
     backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(0,0,0,.05);
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
     z-index:1000;
 }
 
@@ -124,8 +125,9 @@ body::after{
 
 .hero h1{
     font-size:5rem;
-    color:var(--heading);
-    line-height:1.1;
+    line-height:1;
+    white-space:nowrap;
+}
 }
 
 .hero h2{
