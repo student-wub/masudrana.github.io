@@ -356,9 +356,10 @@ footer h3{
 @media(max-width:900px){
 
     .hero{
-        flex-direction:column-reverse;
+        flex-direction:column;
         text-align:center;
     }
+}
 
     .hero h1{
         font-size:3rem;
@@ -368,13 +369,27 @@ footer h3{
         width:280px;
     }
 }
-
 @media(max-width:768px){
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
+    .hero h1{
+        font-size:3rem;
     }
+
+    .hero h2{
+        font-size:1rem;
+    }
+}
+@media(max-width:768px){
+
+    .nav-links{
+        gap:10px;
+        font-size:14px;
+    }
+
+    .navbar{
+        padding:15px;
+    }
+}
 
     .nav-links{
         flex-wrap:wrap;
