@@ -723,3 +723,40 @@ footer{
     transform:translateY(-10px) scale(1.03);
 
 }
+
+/* Work Gallery */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+}
