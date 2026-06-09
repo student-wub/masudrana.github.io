@@ -1,27 +1,83 @@
 // ======================
-// Navbar Scroll Effect
+// Mobile Menu
+// ======================
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// ======================
+// Close Menu After Click
+// ======================
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+// ======================
+// Scroll Reveal Animation
+// ======================
+
+const observer = new IntersectionObserver(
+
+(entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},
+
+{
+    threshold:0.15
+}
+
+);
+
+document.querySelectorAll(
+".card,.project-card"
+).forEach(el => {
+
+    el.classList.add("hidden");
+
+    observer.observe(el);
+
+});
+
+// ======================
+// Navbar Shadow
 // ======================
 
 window.addEventListener("scroll", () => {
 
     const navbar =
-        document.querySelector(".navbar");
+    document.querySelector(".navbar");
 
-    if (window.scrollY > 50) {
-
-        navbar.style.background =
-            "rgba(255,255,255,0.95)";
+    if(window.scrollY > 30){
 
         navbar.style.boxShadow =
-            "0 5px 20px rgba(0,0,0,0.08)";
+        "0 10px 25px rgba(0,0,0,.08)";
 
-    } else {
-
-        navbar.style.background =
-            "rgba(255,255,255,0.75)";
+    }else{
 
         navbar.style.boxShadow =
-            "none";
+        "0 4px 20px rgba(0,0,0,.05)";
+
     }
 
 });
@@ -31,10 +87,10 @@ window.addEventListener("scroll", () => {
 // ======================
 
 const sections =
-    document.querySelectorAll("section");
+document.querySelectorAll("section");
 
-const navLinks =
-    document.querySelectorAll(".nav-links a");
+const navItems =
+document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
 
@@ -43,27 +99,30 @@ window.addEventListener("scroll", () => {
     sections.forEach(section => {
 
         const sectionTop =
-            section.offsetTop - 150;
+        section.offsetTop - 150;
 
-        if (scrollY >= sectionTop) {
+        if(window.scrollY >= sectionTop){
 
             current =
-                section.getAttribute("id");
+            section.getAttribute("id");
 
         }
 
     });
 
-    navLinks.forEach(link => {
+    navItems.forEach(link => {
 
-        link.classList.remove("active");
+        link.classList.remove("active-link");
 
-        if (
-            link.getAttribute("href") ===
+        if(
+            link.getAttribute("href")
+            ===
             "#" + current
-        ) {
+        ){
 
-            link.classList.add("active");
+            link.classList.add(
+                "active-link"
+            );
 
         }
 
@@ -72,106 +131,9 @@ window.addEventListener("scroll", () => {
 });
 
 // ======================
-// Scroll Reveal
+// Console Message
 // ======================
 
-const revealElements =
-    document.querySelectorAll(
-        ".card,.timeline-card,.skill-card,.project-card,.contact-card"
-    );
-
-const revealObserver =
-    new IntersectionObserver(
-        (entries) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.15
-        }
-    );
-
-revealElements.forEach(item => {
-
-    item.classList.add("hidden");
-
-    revealObserver.observe(item);
-
-});
-
-// ======================
-// Smooth Button Effect
-// ======================
-
-const buttons =
-    document.querySelectorAll(".btn");
-
-buttons.forEach(btn => {
-
-    btn.addEventListener("mouseenter", () => {
-
-        btn.style.transform =
-            "translateY(-4px) scale(1.03)";
-
-    });
-
-    btn.addEventListener("mouseleave", () => {
-
-        btn.style.transform =
-            "translateY(0) scale(1)";
-
-    });
-
-});
-
-// ======================
-// Welcome Console Message
-// ======================
-
-window.addEventListener("load", () => {
-
-    console.log(
-        "Welcome to Masud Rana Portfolio"
-    );
-
-});
-
-// ======================
-// Typewriter Effect
-// ======================
-
-const subtitle =
-document.querySelector(".hero h2");
-
-const text =
-"Diploma Civil Engineer & B.Sc. Civil Engineering Student";
-
-let i = 0;
-
-subtitle.innerHTML = "";
-
-function typeWriter() {
-
-    if (i < text.length) {
-
-        subtitle.innerHTML +=
-            text.charAt(i);
-
-        i++;
-
-        setTimeout(typeWriter, 45);
-
-    }
-
-}
-
-typeWriter();
+console.log(
+"Masud Rana Portfolio Loaded Successfully"
+);
